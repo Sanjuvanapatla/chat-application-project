@@ -18,7 +18,7 @@ export default function Sidebar() {
     if (data.success) {
       nav(`/chat/${data.session.id}`);
     }
-  };
+  }; 
 
   return (
     <div className="w-80 border-r border-gray-200 dark:border-gray-700 h-screen p-4 bg-gray-50 dark:bg-gray-800">
