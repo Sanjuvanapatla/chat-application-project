@@ -17,7 +17,8 @@ export default function Sidebar() {
   }, []);
 
   const handleNew = async () => {
-    const res = await fetch("/api/new-chat");
+    const res = await fetch(`${API_BASE}/api/new-chat`);
+;
     const data = await res.json();
     if (data.success) {
       nav(`/chat/${data.session.id}`);
