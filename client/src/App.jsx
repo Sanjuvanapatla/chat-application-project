@@ -22,7 +22,16 @@ function App() {
               <ThemeToggle theme={theme} setTheme={setTheme} />
             </div>
             <Routes>
-              <Route path="/" element={<div className="p-8">Select or create a chat from the left.</div>} />
+              <Route
+  path="/"
+  element={
+    <div className="p-8 flex items-center justify-center h-full">
+      <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow text-gray-700 dark:text-gray-200 text-lg">
+        Select or create a chat from the left.
+      </div>
+    </div>
+  }
+/>
               <Route path="/chat/:sessionId" element={<ChatWindow />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
