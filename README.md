@@ -39,29 +39,25 @@ GET	/api/new-chat	Create a new session
 GET	/api/session/:id	Get conversation history
 POST	/api/chat/:id	Send message + get structured reply
 🗂 Project Structure
-/chat-app-project
+chat-app-project/
+├── 📦 backend
+│   ├── 📄 server.js
+│   └── 📄 mockData.js
 │
-├── /backend
-│   ├── server.js
-│   ├── mockData.js
-│   ├── package.json
-│   └── node_modules/
-│
-└── /client
-    ├── vite.config.js
-    ├── tailwind.config.js
-    ├── package.json
-    └── /src
-        ├── App.jsx
-        ├── index.css
-        ├── main.jsx
-        ├── /components
-        │     ├── Sidebar.jsx
-        │     ├── ChatWindow.jsx
-        │     ├── ThemeToggle.jsx
-        │     ├── TableResponse.jsx
-        │     └── ChatInput.jsx (optional)
-        └── node_modules/
+├── 🎨 client
+│   ├── 🧩 vite.config.js
+│   ├── 🎨 tailwind.config.js
+│   ├── 🧵 postcss.config.js
+│   └── 📂 src
+│       ├── 🔧 main.jsx
+│       ├── 🎨 index.css
+│       └── 🧩 components
+│           ├── Sidebar.jsx
+│           ├── ChatWindow.jsx
+│           ├── ThemeToggle.jsx
+│           ├── TableResponse.jsx
+│           └── ChatInput.jsx
+
 
 🚀 Getting Started
 1️⃣ Clone the Repository
