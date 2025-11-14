@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import TableResponse from "./TableResponse";
+import { API_BASE } from "../config";
 
 export default function ChatWindow() {
   const { sessionId } = useParams();
@@ -10,7 +11,7 @@ export default function ChatWindow() {
 
   useEffect(() => {
     if (!sessionId) return;
-    fetch(`/api/session/${sessionId}`)
+    fetch(`${API_BASE}/api/session/${sessionId}`)
       .then((r) => r.json())
       .then((data) => {
         if (data.success) setSession(data.session);
